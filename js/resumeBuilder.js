@@ -194,9 +194,8 @@ education.display = function() {
 
 	if (education.onlineCourses.length > 0) {
 		$("#education").append(HTMLonlineClasses);
-		$("#education").append(HTMLschoolStart);
-	
 		for(allOnline in education.onlineCourses) {
+			$("#education").append(HTMLschoolStart);
 			var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[allOnline].title);
 			var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[allOnline].school);
 			var formattedOnlineTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
